@@ -7,25 +7,25 @@
     <style>
         /* =====================================================================
            CSS MURNI (TANPA CDN EKSTERNAL - AMAN DIBUKA OFFLINE / DARI FILE HP)
-           Palet Warna: Sage Green (#2D4232), Cream (#FAF7F2), Gold (#D4AF37)
+           Palet Warna: Sage Green (#2D4436 / #1E3025), Cream (#FAF7F2), Gold (#D4AF37 / #C59B27)
            ===================================================================== */
         :root {
-            --sage-950: #162219;
-            --sage-900: #1F3023;
-            --sage-800: #2D4232;
-            --sage-700: #3B5441;
-            --sage-600: #4F6E56;
-            --sage-200: #CBD9CD;
-            --sage-100: #E6EFE7;
+            --sage-950: #142119;
+            --sage-900: #1E3025;
+            --sage-800: #2c3e32;
+            --sage-700: #3d5243;
+            --sage-600: #4F6E5B;
+            --sage-200: #CBD9CF;
+            --sage-100: #E6EFE8;
             --cream-50: #FDFBF7;
-            --cream-100: #FAF7F2;
-            --cream-200: #F1EBE0;
+            --cream-100: #f8f5ef;
+            --cream-200: #EFE9DD;
             --gold-300: #E6CC7A;
-            --gold-400: #D4AF37;
-            --gold-500: #B89323;
+            --gold-400: #d4af37;
+            --gold-500: #c59b27;
             --gold-600: #967515;
-            --text-dark: #1F2E23;
-            --text-muted: #55695A;
+            --text-dark: #1E2E24;
+            --text-muted: #55695C;
         }
 
         * {
@@ -56,8 +56,7 @@
         }
 
         /* =====================================================================
-           MEKANISME BUKA UNDANGAN BERBASIS CSS MURNI (CHECKBOX HACK + TARGET)
-           100% Jalan walau JavaScript diblokir di file lokal (content://)
+           MEKANISME BUKA UNDANGAN BERBASIS CSS MURNI (CHECKBOX HACK + JS SYNC)
            ===================================================================== */
         #toggle-open-state {
             position: fixed;
@@ -67,7 +66,7 @@
             height: 0;
         }
 
-        /* 1. SAMPUL LAYAR PENUH (COVER OVERLAY) */
+        /* 1. SAMPUL LAYAR PENUH (FULL-SCREEN COVER) */
         .cover-overlay {
             position: fixed;
             inset: 0;
@@ -93,7 +92,7 @@
             pointer-events: none;
         }
 
-        /* Konten utama undangan tersembunyi sebelum tombol dibuka agar layar tidak double-scroll */
+        /* Konten utama undangan tersembunyi sebelum tombol dibuka */
         .main-invitation-shell {
             display: none;
             opacity: 0;
@@ -132,7 +131,7 @@
             height: 84px;
             border-radius: 50%;
             border: 1.5px solid var(--gold-400);
-            background: rgba(22, 34, 25, 0.55);
+            background: rgba(20, 33, 25, 0.55);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -200,7 +199,7 @@
         .guest-card {
             width: 100%;
             max-width: 370px;
-            background: rgba(22, 34, 25, 0.72);
+            background: rgba(20, 33, 25, 0.72);
             border: 1px solid rgba(212, 175, 55, 0.45);
             border-radius: 20px;
             padding: 22px 20px;
@@ -232,7 +231,7 @@
             width: 100%;
             padding: 14px 20px;
             border-radius: 14px;
-            background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-300) 100%);
+            background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-500) 100%);
             color: var(--sage-950);
             font-weight: 700;
             font-size: 0.94rem;
@@ -255,13 +254,12 @@
             max-width: 540px;
             margin: 0 auto;
             background-color: var(--cream-100);
-            box-shadow: 0 10px 40px rgba(31, 48, 35, 0.14);
+            box-shadow: 0 10px 40px rgba(30, 48, 37, 0.14);
             min-height: 100vh;
             position: relative;
             padding-bottom: 96px;
         }
 
-        /* Hero Header Ringkas di Puncak Isi Undangan */
         .inner-hero {
             background: linear-gradient(160deg, var(--sage-900) 0%, var(--sage-800) 100%);
             color: var(--cream-50);
@@ -283,7 +281,6 @@
             color: var(--gold-300);
         }
 
-        /* Section Umum */
         .section-block {
             padding: 40px 22px;
         }
@@ -333,7 +330,7 @@
             padding: 28px 22px;
             text-align: center;
             border: 1px solid rgba(212, 175, 55, 0.45);
-            box-shadow: 0 8px 24px rgba(45, 66, 50, 0.16);
+            box-shadow: 0 8px 24px rgba(45, 68, 54, 0.16);
         }
 
         .bismillah-text {
@@ -355,7 +352,7 @@
             margin-top: 16px;
             padding: 5px 16px;
             border-radius: 999px;
-            background: rgba(22, 34, 25, 0.65);
+            background: rgba(20, 33, 25, 0.65);
             border: 1px solid rgba(212, 175, 55, 0.45);
             font-size: 0.75rem;
             font-weight: 600;
@@ -372,7 +369,7 @@
             border-radius: 24px;
             padding: 28px 20px;
             text-align: center;
-            box-shadow: 0 4px 16px rgba(45, 66, 50, 0.05);
+            box-shadow: 0 4px 16px rgba(45, 68, 54, 0.05);
         }
 
         .avatar-circle {
@@ -447,7 +444,7 @@
             padding: 28px 18px;
             text-align: center;
             border: 1px solid rgba(212, 175, 55, 0.45);
-            box-shadow: 0 10px 26px rgba(31, 48, 35, 0.18);
+            box-shadow: 0 10px 26px rgba(30, 48, 37, 0.18);
         }
 
         .countdown-grid {
@@ -458,7 +455,7 @@
         }
 
         .cd-item {
-            background: rgba(22, 34, 25, 0.72);
+            background: rgba(20, 33, 25, 0.72);
             border: 1px solid rgba(212, 175, 55, 0.35);
             border-radius: 16px;
             padding: 14px 6px;
@@ -491,7 +488,7 @@
             padding: 26px 20px;
             text-align: center;
             margin-bottom: 18px;
-            box-shadow: 0 4px 16px rgba(45, 66, 50, 0.05);
+            box-shadow: 0 4px 16px rgba(45, 68, 54, 0.05);
         }
 
         .event-icon-box {
@@ -575,7 +572,7 @@
         .btn-primary {
             background-color: var(--sage-800);
             color: var(--cream-50);
-            box-shadow: 0 4px 14px rgba(45, 66, 50, 0.22);
+            box-shadow: 0 4px 14px rgba(45, 68, 54, 0.22);
         }
 
         .btn-outline {
@@ -638,7 +635,7 @@
             border-radius: 24px;
             padding: 24px 18px;
             text-align: center;
-            box-shadow: 0 8px 24px rgba(45, 66, 50, 0.08);
+            box-shadow: 0 8px 24px rgba(45, 68, 54, 0.08);
             margin-bottom: 22px;
         }
 
@@ -915,6 +912,25 @@
         }
 
         /* =====================================================================
+           8B. TURUT MENGUNDANG / TUAN RUMAH
+           ===================================================================== */
+        .host-card {
+            background-color: var(--cream-50);
+            border: 1.5px solid var(--gold-400);
+            border-radius: 22px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(45, 68, 54, 0.05);
+        }
+
+        .host-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--sage-900);
+            margin-top: 6px;
+        }
+
+        /* =====================================================================
            9. FOOTER, FLOATING AUDIO & BOTTOM NAVBAR
            ===================================================================== */
         .footer-section {
@@ -949,7 +965,7 @@
             z-index: 40;
             width: 92%;
             max-width: 460px;
-            background-color: rgba(31, 48, 35, 0.95);
+            background-color: rgba(30, 48, 37, 0.95);
             border: 1px solid rgba(212, 175, 55, 0.4);
             border-radius: 18px;
             padding: 6px 8px;
@@ -991,9 +1007,9 @@
            ===================================================================== */
         .toast-box {
             position: fixed;
-            top: 18px;
+            bottom: 84px;
             left: 50%;
-            transform: translate(-50%, -20px);
+            transform: translate(-50%, 20px);
             z-index: 60;
             background-color: var(--sage-950);
             color: var(--gold-300);
@@ -1019,7 +1035,7 @@
             position: fixed;
             inset: 0;
             z-index: 55;
-            background-color: rgba(22, 34, 25, 0.88);
+            background-color: rgba(20, 33, 25, 0.88);
             display: none;
             align-items: center;
             justify-content: center;
@@ -1083,35 +1099,35 @@
             groomParents: "Putra dari Bapak Abd Wahid & Ibu Aidah",
             brideName: "Rusdiana Janna",
             brideParents: "Putri dari Bapak Sumali & Ibu Rukmani",
-            eventDateISO: "2026-11-29T08:00:00+07:00",
+            eventDateISO: "2026-11-29T00:00:00+07:00",
             mapsUrl: "https://maps.app.goo.gl/wHWAG57bgYNq4P1p7?g_st=ac",
-            whatsappNumber: "6281234567890", // Ganti dengan nomor WA penerima konfirmasi (format 628xxx)
+            whatsappNumber: "6285257275749",
             ewallets: {
                 dana: {
-                    label: "08xx-xxxx-xxxx",
-                    copyValue: "08xxxxxxxxxx",
+                    label: "085257275749",
+                    copyValue: "085257275749",
                     holder: "Asadullah"
                 },
                 gopay: {
-                    label: "08xx-xxxx-xxxx",
-                    copyValue: "08xxxxxxxxxx",
+                    label: "085257275749",
+                    copyValue: "085257275749",
                     holder: "Asadullah"
                 }
             },
             qris: {
                 imageSrc: "1778824732335.png",
-                downloadName: "QRIS-ANKER-MAN-KRAKSAAN.png",
+                downloadName: "1778824732335.png",
                 merchantName: "ANKER MAN, KRAKSAAN",
                 nmid: "ID1024364371830"
             }
         };
     </script>
 
-    <!-- CHECKBOX PENGENDALI BUKA/TUTUP SAMPUL (CSS MURNI - BEKERJA TANPA JS SEKALIPUN) -->
+    <!-- CHECKBOX PENGENDALI BUKA/TUTUP SAMPUL (HTML/CSS MURNI + JS SYNC) -->
     <input type="checkbox" id="toggle-open-state" aria-hidden="true">
 
     <!-- =====================================================================
-         1. HALAMAN SAMPUL PENUH (FULL-SCREEN COVER SEPERTI VERSI AWAL)
+         1. HALAMAN SAMPUL LAYAR PENUH (FULL-SCREEN COVER)
          ===================================================================== -->
     <section id="cover-screen" class="cover-overlay">
         <!-- Ornamen Sudut SVG -->
@@ -1148,7 +1164,7 @@
             <small>Kepada Yth. Bapak/Ibu/Saudara/i:</small>
             <h2 id="guest-name-display" class="font-serif">Tamu Undangan</h2>
 
-            <!-- Tombol label untuk #toggle-open-state: langsung membuka isi undangan -->
+            <!-- Tombol label untuk #toggle-open-state: membuka isi undangan di bawahnya -->
             <label for="toggle-open-state" id="btn-open-trigger" class="btn-open-label" role="button" tabindex="0">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -1251,28 +1267,13 @@
                 </div>
             </section>
 
-            <!-- Waktu & Lokasi Acara (Google Maps) -->
+            <!-- Waktu & Lokasi Acara (Jadwal Tunggal Resepsi + Google Maps) -->
             <section id="acara" class="section-block">
                 <div class="section-header">
                     <span class="section-kicker">Rangkaian Acara</span>
                     <h2 class="section-title font-serif">Waktu &amp; Lokasi</h2>
                 </div>
 
-                <!-- Akad Nikah -->
-                <div class="event-card">
-                    <div class="event-icon-box">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="event-title font-serif">Akad Nikah</h3>
-                    <p class="event-date">Minggu, 29 November 2026</p>
-                    <p class="event-time">Pukul 08.00 WIB - Selesai</p>
-                    <div class="event-sep"></div>
-                    <p class="event-note">Titik lokasi acara tersedia pada tautan Google Maps di bawah ini</p>
-                </div>
-
-                <!-- Resepsi -->
                 <div class="event-card">
                     <div class="event-icon-box">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -1281,7 +1282,7 @@
                     </div>
                     <h3 class="event-title font-serif">Resepsi Pernikahan</h3>
                     <p class="event-date">Minggu, 29 November 2026</p>
-                    <p class="event-time">Pukul 10.00 WIB - Selesai</p>
+                    <p class="event-time">Jam Bebas (Sepanjang Hari)</p>
                     <div class="event-sep"></div>
                     <p class="event-note">Titik lokasi acara tersedia pada tautan Google Maps di bawah ini</p>
                 </div>
@@ -1317,13 +1318,21 @@
                 </button>
             </section>
 
+            <!-- Turut Mengundang / Tuan Rumah -->
+            <section id="keluarga" class="section-block" style="padding-top: 8px; padding-bottom: 34px;">
+                <div class="host-card">
+                    <span class="section-kicker" style="margin-bottom: 4px;">Turut Mengundang / Tuan Rumah</span>
+                    <p class="host-name font-serif">Keluarga Besar Bapak Abd Wahid &amp; Ibu Aidah</p>
+                </div>
+            </section>
+
             <!-- Amplop Digital & QRIS -->
             <section id="amplop" class="section-block section-alt">
                 <div class="section-header">
                     <span class="section-kicker">Tanda Kasih</span>
                     <h2 class="section-title font-serif">Amplop Digital</h2>
                     <p class="section-desc">
-                        Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat mengirimkannya melalui QRIS atau rekening berikut:
+                        Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat mengirimkannya melalui QRIS atau E-Wallet berikut:
                     </p>
                 </div>
 
@@ -1339,7 +1348,7 @@
                     <div id="qris-frame-trigger" class="qris-frame">
                         <img
                             id="qris-main-img"
-                            src="1000166145.png"
+                            src="1778824732335.png"
                             alt="QRIS ANKER MAN, KRAKSAAN - NMID ID1024364371830"
                             onerror="this.style.display='none'; document.getElementById('qris-fallback-ui').classList.add('active');"
                         >
@@ -1348,7 +1357,7 @@
                             <p class="font-serif" style="font-size: 1.15rem; font-weight: 700; margin: 6px 0;">ANKER MAN, KRAKSAAN</p>
                             <p class="font-mono" style="font-size: 0.78rem; color: var(--text-muted);">NMID: ID1024364371830</p>
                             <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 10px;">
-                                Letakkan file gambar <strong>1000166145.png</strong> di folder yang sama dengan file HTML ini untuk menampilkan kode QR.
+                                Letakkan file gambar <strong>1778824732335.png</strong> di folder yang sama dengan file HTML ini untuk menampilkan kode QR.
                             </p>
                         </div>
                         <p class="qris-zoom-hint">Ketuk kartu QRIS untuk memperbesar</p>
@@ -1368,7 +1377,7 @@
                         <button type="button" id="btn-open-qris-modal" class="btn btn-outline">
                             <span>Perbesar QRIS</span>
                         </button>
-                        <a href="1000166145.png" download="QRIS-ANKER-MAN-KRAKSAAN.png" class="btn btn-primary">
+                        <a href="1778824732335.png" download="1778824732335.png" class="btn btn-primary">
                             <span>Unduh QRIS</span>
                         </a>
                     </div>
@@ -1384,18 +1393,18 @@
                     <div class="bank-card">
                         <div>
                             <span class="bank-badge">DANA</span>
-                            <p id="dana-number-text" class="bank-num font-mono">08xx-xxxx-xxxx</p>
+                            <p id="dana-number-text" class="bank-num font-mono">085257275749</p>
                             <p class="bank-holder">a.n. <strong id="dana-holder-text">Asadullah</strong></p>
                         </div>
-                        <button type="button" id="btn-copy-dana" class="btn-copy-sm" data-copy="08xxxxxxxxxx">Salin Nomor</button>
+                        <button type="button" id="btn-copy-dana" class="btn-copy-sm" data-copy="085257275749">Salin Nomor</button>
                     </div>
                     <div class="bank-card">
                         <div>
                             <span class="bank-badge">GoPay</span>
-                            <p id="gopay-number-text" class="bank-num font-mono">08xx-xxxx-xxxx</p>
+                            <p id="gopay-number-text" class="bank-num font-mono">085257275749</p>
                             <p class="bank-holder">a.n. <strong id="gopay-holder-text">Asadullah</strong></p>
                         </div>
-                        <button type="button" id="btn-copy-gopay" class="btn-copy-sm" data-copy="08xxxxxxxxxx">Salin Nomor</button>
+                        <button type="button" id="btn-copy-gopay" class="btn-copy-sm" data-copy="085257275749">Salin Nomor</button>
                     </div>
                 </div>
             </section>
@@ -1430,40 +1439,30 @@
                     </div>
 
                     <div class="btn-group-2" style="margin-top: 6px;">
-                        <button type="submit" class="btn btn-primary">Simpan Ucapan</button>
+                        <button type="submit" class="btn btn-outline">Simpan di Halaman</button>
                         <button type="button" id="btn-send-wa" class="btn btn-whatsapp">Kirim via WhatsApp</button>
                     </div>
 
                     <p class="form-helper-note">
-                        <strong>Catatan:</strong> Tombol <em>Simpan Ucapan</em> menyimpan doa di perangkat ini (lokal) karena undangan ini berupa halaman statis. Gunakan tombol <em>Kirim via WhatsApp</em> agar konfirmasi &amp; ucapan langsung masuk ke WhatsApp mempelai.
+                        <strong>Info:</strong> Tekan <em>Kirim via WhatsApp</em> untuk mengirimkan konfirmasi kehadiran &amp; doa langsung ke WhatsApp (<strong>085257275749</strong>), atau <em>Simpan di Halaman</em> untuk menampilkan ucapan di layar ini.
                     </p>
                 </form>
 
                 <div class="wishes-header">
                     <h3 class="font-serif" style="font-size: 1.25rem; color: var(--sage-900);">Doa dari Tamu</h3>
-                    <span id="wishes-count" class="wishes-count">2 Ucapan</span>
+                    <span id="wishes-count" class="wishes-count">1 Ucapan</span>
                 </div>
 
                 <div id="wishes-list" class="wishes-list">
                     <div class="wish-item">
                         <div class="wish-top">
                             <div>
-                                <p class="wish-name">Keluarga Besar Bapak Abd Wahid</p>
-                                <span class="wish-time">Doa Keluarga</span>
+                                <p class="wish-name">Keluarga Besar Bapak Abd Wahid &amp; Ibu Aidah</p>
+                                <span class="wish-time">Tuan Rumah</span>
                             </div>
                             <span class="wish-badge">Hadir</span>
                         </div>
                         <p class="wish-msg">Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fi khair. Semoga menjadi keluarga sakinah, mawaddah, warahmah.</p>
-                    </div>
-                    <div class="wish-item">
-                        <div class="wish-top">
-                            <div>
-                                <p class="wish-name">Keluarga Besar Bapak Sumali</p>
-                                <span class="wish-time">Doa Keluarga</span>
-                            </div>
-                            <span class="wish-badge">Hadir</span>
-                        </div>
-                        <p class="wish-msg">Selamat menempuh hidup baru untuk Asadullah &amp; Rusdiana Janna. Semoga selalu diberkahi kebahagiaan dunia dan akhirat.</p>
                     </div>
                 </div>
             </section>
@@ -1495,7 +1494,6 @@
         <nav class="bottom-nav" aria-label="Navigasi Undangan">
             <ul>
                 <li>
-                    <!-- Label kembali untuk menutup kembali ke sampul jika diinginkan -->
                     <label for="toggle-open-state" id="nav-back-cover">
                         <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-bottom: 2px;">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
@@ -1551,14 +1549,14 @@
 
             <div class="modal-img-wrap">
                 <img
-                    src="1000166145.png"
+                    src="1778824732335.png"
                     alt="QRIS ANKER MAN, KRAKSAAN - NMID ID1024364371830"
                     onerror="this.style.display='none'; document.getElementById('modal-qris-fallback').classList.add('active');"
                 >
                 <div id="modal-qris-fallback" class="qris-fallback-card">
                     <p style="font-weight: 700;">ANKER MAN, KRAKSAAN</p>
                     <p class="font-mono" style="font-size: 0.8rem; margin-top: 4px;">NMID: ID1024364371830</p>
-                    <p style="font-size: 0.74rem; color: var(--text-muted); margin-top: 8px;">File gambar 1000166145.png belum ditemukan di folder yang sama.</p>
+                    <p style="font-size: 0.74rem; color: var(--text-muted); margin-top: 8px;">File gambar 1778824732335.png belum ditemukan di folder yang sama.</p>
                 </div>
             </div>
 
@@ -1567,7 +1565,7 @@
             </p>
 
             <div class="btn-group-2" style="margin-top: 0;">
-                <a href="1000166145.png" download="QRIS-ANKER-MAN-KRAKSAAN.png" class="btn btn-primary">Unduh QRIS</a>
+                <a href="1778824732335.png" download="1778824732335.png" class="btn btn-primary">Unduh QRIS</a>
                 <button type="button" id="btn-close-modal-bottom" class="btn btn-outline">Tutup</button>
             </div>
         </div>
@@ -1799,7 +1797,7 @@
                 });
             }
 
-            // 7. Hitung Mundur Real-Time ke 29 November 2026 Pukul 08.00 WIB
+            // 7. Hitung Mundur Real-Time ke Minggu, 29 November 2026 (00:00 WIB)
             var targetDate = new Date(WEDDING_DATA.eventDateISO).getTime();
             function updateCountdown() {
                 var now = new Date().getTime();
@@ -1844,10 +1842,10 @@
                             "VERSION:2.0",
                             "PRODID:-//Undangan Pernikahan//Asadullah & Rusdiana Janna//ID",
                             "BEGIN:VEVENT",
-                            "DTSTART:20261129T010000Z",
-                            "DTEND:20261129T070000Z",
-                            "SUMMARY:Pernikahan Asadullah & Rusdiana Janna",
-                            "DESCRIPTION:Akad Nikah & Resepsi Pernikahan Asadullah & Rusdiana Janna. Google Maps: " + WEDDING_DATA.mapsUrl,
+                            "DTSTART;VALUE=DATE:20261129",
+                            "DTEND;VALUE=DATE:20261130",
+                            "SUMMARY:Resepsi Pernikahan Asadullah & Rusdiana Janna (Jam Bebas)",
+                            "DESCRIPTION:Resepsi Pernikahan Asadullah & Rusdiana Janna - Waktu: Jam Bebas (Sepanjang Hari). Keluarga Besar Bapak Abd Wahid & Ibu Aidah. Google Maps: " + WEDDING_DATA.mapsUrl,
                             "LOCATION:" + WEDDING_DATA.mapsUrl,
                             "END:VEVENT",
                             "END:VCALENDAR"
@@ -1868,19 +1866,13 @@
             }
 
             // 9. Buku Tamu / Ucapan Doa
-            var STORAGE_KEY = "wishes_asadullah_rusdiana_v4";
+            var STORAGE_KEY = "wishes_asadullah_rusdiana_v5";
             var initialWishes = [
                 {
-                    name: "Keluarga Besar Bapak Abd Wahid",
+                    name: "Keluarga Besar Bapak Abd Wahid & Ibu Aidah",
                     status: "Hadir",
                     message: "Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fi khair. Semoga menjadi keluarga sakinah, mawaddah, warahmah.",
-                    time: "Doa Keluarga"
-                },
-                {
-                    name: "Keluarga Besar Bapak Sumali",
-                    status: "Hadir",
-                    message: "Selamat menempuh hidup baru untuk Asadullah & Rusdiana Janna. Semoga selalu diberkahi kebahagiaan dunia dan akhirat.",
-                    time: "Doa Keluarga"
+                    time: "Tuan Rumah"
                 }
             ];
 
@@ -1944,12 +1936,12 @@
                         name: nameVal,
                         status: statusVal,
                         message: msgVal,
-                        time: "Tersimpan di perangkat"
+                        time: "Tersimpan di halaman"
                     });
                     saveWishes(currentWishes);
                     renderWishes();
                     document.getElementById("rsvp-message").value = "";
-                    showToast("Ucapan tersimpan di perangkat ini!");
+                    showToast("Ucapan berhasil disimpan di halaman!");
                 });
             }
 
